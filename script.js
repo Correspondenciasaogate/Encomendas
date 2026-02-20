@@ -395,7 +395,7 @@ function enviarZap(item, tipo) {
     const tel = item.telefone.replace(/\D/g, '');
     let msg = "";
     if (tipo === 'chegada') {
-        msg = `Olá, *${item.destinatario}*! 📦\nSua encomenda (NF: *${item.nf}*) chegou na Portaria.\n*Sala ${item.sala}* (${item.torre}).`;
+        msg = `Olá, *${item.destinatario}*! 📦\nSua encomenda (NF: *${item.nf}*) chegou no -1 Setor Encomendas \n*Sala ${item.sala}* (${item.torre}).`;
     } else {
         msg = `✅ *Confirmação de Retirada*\nOlá, *${item.destinatario}*!\nSua encomenda (NF: *${item.nf}*) foi retirada por *${item.quemRetirou}* em ${item.dataRetirada}.`;
     }
@@ -577,4 +577,5 @@ function apagar(id) {
         document.getElementById('resultadoConteudo').innerHTML = '';
         document.getElementById('blocoConfirmarRetirada').style.display = 'none';
     }
+
 }
